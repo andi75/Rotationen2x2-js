@@ -13,11 +13,10 @@ function setup()
 
 function drawShape(points) 
 {
-  var s = 1;
   beginShape();
   for(var i in points)
   {
-    vertex(s * points[i].x, s * points[i].y);
+    vertex(points[i].x, points[i].y);
   }  
   endShape(CLOSE);
 }
@@ -39,7 +38,7 @@ function draw()
      new Point(-k, -k),
      new Point(0, -1),
      new Point(k, -k),
-     new Point(1, 0)
+     // new Point(1, 0)
   ];
   
   phi += PI / 36;
